@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA Calculator</title>
+    <script>
+        function generateInputs() {
+            var numSubjects = parseInt(document.getElementById("semester").value);
+            var inputs = "";
+
+            for (var i = 1; i <= numSubjects; i++) {
+                inputs += `
+                <label for="g${i}">GRADE POINTS OF SUBJECT ${i}*</label>
+                <input type="number" id="g${i}" name="g${i}" min="6" max="10" required>
+                <label for="c${i}">CREDIT OF SUBJECT ${i}*</label>
+                <input type="number" id="c${i}" name="c${i}" min="1" max="50" required><br>`;
+            }
+
+            document.getElementById("inputs").innerHTML = inputs;
+        }
+    </script>
+    <link rel="stylesheet" href="..\static\w.css">
+</head>
+<body>
+    <h2>GPA Calculator</h2>
+    <form method = "post">
+        <label for="semester">SELECT NUMBER OF SUBJECTS</label>
+        <select id="semester" onchange="generateInputs()" name="op">
+            <option value="0">CHOOSE</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <div id="inputs"></div>
+        <label for="">YOUR CGPA <input type="text" value="{{data}}" placeholder="Click Calculate to get your GPA. #(READONLY)" readonly></label>
+        <input type="submit" value="Calculate">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>

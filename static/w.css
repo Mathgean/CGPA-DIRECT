@@ -1,0 +1,68 @@
+/* Include your existing CSS rules here */
+
+/* Add the provided CSS rules */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="reset"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+#inputs {
+    margin-top: 20px;
+}
+
+/* Additional styling for responsive design */
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+}
